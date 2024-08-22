@@ -32,24 +32,25 @@ const DeleteBlog = () => {
     )
 
     //Function to delete blog
-    const handleDeleteBlog = () => {
+    const handleDeleteBlog = async () => {
         setLoading(true);
-        axios
-        .delete(`http://localhost:3000/api/posts/${id}`)
-        .then(() => {
+        try {
+            await axios.delete(`http://localhost:3000/api/posts/${id}`);
             setLoading(false);
-            enqueueSnackbar('Blog deleted succesfully',{variant: 'success'});
+            enqueueSnackbar('Blog deleted successfully', { variant: 'success' });
             navigate('/api/posts');
-        })
-        .catch((error) => {
+        } catch (error) {
             setLoading(false);
-            enqueueSnackbar('Error deleting blog', {variant: 'error'});
-            console.log(error);
-        });
+            enqueueSnackbar('Error deleting blog', { variant: 'error' });
+            console.error(error);
+        }
     };
+
+    //Function to handle not deleting blog
     const handleDontDeleteBlog = () => {
         navigate('/api/posts');
     }
+    
     return (
     <div className='p-4'>
         <h1 className='text-3xl my-4'>Delete blog</h1>
