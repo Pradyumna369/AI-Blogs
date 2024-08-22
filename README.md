@@ -1,8 +1,35 @@
-# React + Vite
+Instruction for setting up and running the application locally:
+1) Install Nodejs, MongoDB,  express
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Setup backend
+2) Install dependencies in backend - 
+    cd backend
+    npm i -s mongoose cors express
+3) Create a file "config.js" and setup environment varialbles in the below format
+    export const API_KEY =  "API KEY";
+    export const mongoDBURL = "MongoDB URL"
+4) Run the application
+    node server.js
 
-Currently, two official plugins are available:
+    The server will start on port 3000
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Setup Frontend
+5) cd Blog_app
+
+6) Install dependencies, tailwind CSS, material ui icons, notistack, react-router-dom
+    npm i tailwindcss notistack react-router-dom axios
+    npm i -s @mui/icons-material
+
+6) Run the application
+    npm run dev
+
+Loom demo video link:
+https://www.loom.com/share/a6b20b35c6384916a51a9f62691b74b1?sid=15d18497-5ba7-415e-a88c-54128d438799
+
+
+
+
+
+
+
+
