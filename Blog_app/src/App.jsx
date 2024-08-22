@@ -1,7 +1,6 @@
 import {Route, Routes} from 'react-router-dom'
 import './index.css'
 import Home from './pages/Home'
-import GenerateBlog from './pages/GenerateBlog'
 import DeleteBlog from './pages/DeleteBlog'
 import ShowBlog from './pages/ShowBlogs'
 
