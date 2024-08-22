@@ -7,6 +7,7 @@ import { useSnackbar } from 'notistack';
 //Component to display a list of blogs
 const ShowBlogs = () => {
   const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
 
   useEffect(() => {
