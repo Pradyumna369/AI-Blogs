@@ -78,9 +78,11 @@ const Home = () => {
             </Link>
         </div>
         <div class="top-0 left-0 p-4">
+        <Link to={`/`}>
         <h1 className='text-3xl font-extrabold text-transparent bg-clip-text bg-indigo-500'>
             AI Blogs
         </h1>
+        </Link>
         </div>
             <BlogForm prompt={prompt} setPrompt={setPrompt} generateBlog={generateBlog} />
             {loading ? <Spinner /> : (show && 
