@@ -5,9 +5,11 @@ Setup backend
 2) Install dependencies in backend - 
     cd backend
     npm i -s mongoose cors express
+
 3) Create a file "config.js" and setup environment varialbles in the below format
     export const API_KEY =  "API KEY";
     export const mongoDBURL = "MongoDB URL"
+    
 4) Run the application
     node server.js
 
