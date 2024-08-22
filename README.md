@@ -9,8 +9,9 @@ Setup backend
 3) Create a file "config.js" and setup environment varialbles in the below format
     export const API_KEY =  "API KEY";
     export const mongoDBURL = "MongoDB URL"
-    
+
 4) Run the application
+
     node server.js
 
     The server will start on port 3000
