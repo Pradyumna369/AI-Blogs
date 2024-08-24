@@ -19,7 +19,9 @@ const Home = () => {
         try {
             setShow(false);
             setLoading(true);
-            const response = await axios.post('http://localhost:3000/api/generate', { prompt });
+            //Prompt engineering the prompt to write a blog about it
+            const modifiedPrompt = `You are a professional blog writer. Please write a detailed blog post based on the following prompt: ${prompt}`;
+            const response = await axios.post('http://localhost:3000/api/generate', { prompt: modifiedPrompt });
             extractData(response.data.content);
             setLoading(false);
             setShow(true);
